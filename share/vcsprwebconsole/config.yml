@@ -1,0 +1,62 @@
+# This is the main configuration file of your Dancer app
+# env-related settings should go to environments/$env.yml
+# all the settings in this file will be loaded at Dancer's startup.
+
+# Your application's name
+appname: "vcsprweb"
+
+# The default layout to use for your application (located in
+# views/layouts/main.tt)
+#layout: "main"
+
+# when the charset is set to UTF-8 Dancer will handle for you
+# all the magic of encoding and decoding. You should not care
+# about unicode within your app when this setting is set (recommended).
+charset: "UTF-8"
+
+# template engine
+# simple: default and very basic template engine
+# template_toolkit: TT
+
+#template: "simple"
+
+session: "YAML"
+session_dir: "/tmp/dancer-sessions"
+
+template: "template_toolkit"
+engines:
+   template_toolkit:
+     start_tag: '[%'
+     end_tag:   '%]'
+
+INCLUDE_PATH: '/opt/VCSPR/share/vcsprwebconsole/views'
+
+
+plugins:
+#  Auth::Extensible:
+#    realms:
+#      config:
+#        provider: Config
+#          users:
+#             - user: admin
+#               pass: admin
+#              roles:
+#                - Admin
+#                - Manager
+#                - Developer
+#            - user: viewer
+#              pass: '{SSHA}+2u1HpOU7ak6iBR6JlpICpAUvSpA/zBM'
+#              roles:
+#                - View
+  Database:
+    connections:
+      vcsprweb:
+        driver: SQLite
+        database: /opt/VCSPR/data/Deploy.db
+#        on_connect_do: ['PRAGMA encoding = "UTF-8"']
+  DBIC:
+    vcspr:
+      dsn:  "dbi:SQLite:dbname=/opt/VCSPR/data/Deploy.db"
+      schema_class: 'vcspr::schema'
+#      on_connect_do: ['PRAGMA encoding = "UTF-8"']
+#      generate: 1

@@ -1,0 +1,132 @@
+#auth-wrap .top {
+    background-color: #00a1cb;
+    border-color: #0091b6;
+}
+#auth-wrap .middle {
+    border-left: 5px solid #0091b6;
+    border-bottom: 1px solid #0091b6;
+}
+#auth-wrap .bottom a {
+    color: #0091b6;
+}
+
+#wrap .header,
+#wrap .footer {
+    background-color: #00a1cb;
+    border-color: #0091b6;
+}
+
+#wrap .header a.open-nav:hover,
+#wrap .header a.open-nav:active,
+#wrap .header a.open-nav-active {
+    background-color: #0091b6;
+}
+
+#wrap .nav-left .inline {
+	background-color: #e7f1f1;
+    border-color: #0091b6;
+}
+
+#nav-sidebar li.active a {
+    background-color: #00a1cb;
+    border-color: #0091b6;
+}
+
+#nav-sidebar li.active ul {
+    border-color: #0091b6;
+}
+
+#nav-sidebar li.active ul {
+	border-color: #0091b6;
+}
+
+#nav-sidebar li ul li.active a {
+    color: #0091b6;
+}
+
+#nav-sidebar li.active ul li a {
+	background-color: #f1f7f7;
+    border-color: #0091b6;
+}
+
+#nav-sidebar li.active ul li a:hover {
+	background-color: #e6efef;
+	border-color: #00a1cb;
+}
+
+#wrap .header ul.nav li a:hover,
+#wrap .header ul.nav li a.active,
+#wrap .header ul.nav li a:active,
+#wrap .header ul.nav li.active a {
+    background-color: #0091b6;
+}
+
+#wrap .header ul.nav li ul {
+    border-color: #0091b6;
+}
+
+#wrap .middle .content .content-top {
+    border-color: #0091b6;
+}
+#wrap .middle .content ul.breadcrumb li a {
+    color: #00a1cb;
+}
+#wrap .middle .content ul.breadcrumb li a:hover {
+    color: #0091b6;
+}
+#wrap .middle .content ul.breadcrumb li.dashboard a {
+    background-color: #00a1cb;
+}
+#wrap .middle .content ul.breadcrumb li.dashboard a:hover {
+    background-color: #0091b6;
+}
+
+#wrap .middle .content .content-bottom .box .title {
+    border-color: #00a1cb;
+}
+
+#wrap .middle .content .content-top ul.breadcrumb li a {
+    color: #00a1cb;
+}
+#wrap .middle .content .content-top ul.breadcrumb li a:hover {
+    color: #0091b6;
+}
+#wrap .middle .content .content-top ul.breadcrumb li.dashboard a {
+    background-color: #00a1cb;
+}
+#wrap .middle .content .content-top ul.breadcrumb li.dashboard a:hover {
+    background-color: #0091b6;
+}
+
+a {
+  color: #0091b6;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #00a1cb;
+  text-decoration: underline;
+}
+
+.dropdown-menu > li > a,
+.dropdown-menu > li > a,
+.dropdown-submenu > a,
+.dropdown-submenu > a {
+  color: #0091b6;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  background: #0091b6;
+}
+
+a.scrollUp,
+a.scrollUp:focus {
+    background-color: #00a1cb;
+}
+a.scrollUp:hover {
+    background-color: #0091b6;
+}

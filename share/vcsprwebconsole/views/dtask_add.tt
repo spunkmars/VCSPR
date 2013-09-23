@@ -1,0 +1,139 @@
+[% INCLUDE html_head.tt %]
+<body>
+
+<!-- Begin: Page Preloader -->
+<div id="preloader">
+    <div class="inline"></div>
+</div>
+<!-- End: Page Preloader -->
+
+<div id="wrap">
+    <!-- Begin: Responsive Menu -->
+    <div class="nav-left" id="nav-left">
+        <div class="inline">
+            <div class="fixed"></div>
+        </div>
+    </div>
+    <!-- End: Responsive Menu -->
+    <!-- Begin: Header -->
+         [% INCLUDE header.tt %]
+    <!-- End: Header -->
+    <!-- Begin: Middle -->
+    <div class="middle">
+        <!-- Begin: Sidebar -->
+                 [% INCLUDE sidebar.tt active_sidebar_tag = 'dtask' %]
+        <!-- End: Sidebar -->
+        <!-- Begin: Content -->
+                <div class="content">
+                        <div class="content-top">
+                                <ul class="breadcrumb">
+                                        <li class="dashboard">
+                                                <a href="/" title="Dashboard"><i class="icon-home icon-large"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href="/dtask/" title="Project">DTask</a>
+                                        </li>
+                                        <li>
+                                                <i class="icon-angle-right icon-large"></i>
+                                        </li>
+                                        <li>
+                                                <a href="/dtask/add/" title="DTask Add">DTask Add</a>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div class="content-bottom">
+                                <div class="row-fluid">
+                                        <div class="box span12">
+                                                <div class="title">
+                                                        <div class="head">
+                                                                <i class="icon-edit icon-large"></i>
+                                                                <h2>Basic elements</h2>
+                                                        </div>
+                                                        <div class="actions">
+                                                                <div class="item">
+                                                                        <i class="icon-minus collapse-box-toggle"></i>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="block">
+                                                        <div class="form">
+                                                                <form action="/dtask/add/" method="post" class="form-horizontal form-bordered form-validation">
+                                                                        <div class="control-group">
+                                                                                <label for="projectname" class="control-label">dtaskname</label>
+                                                                                <div class="controls">
+                                                                                        <input class="validate[required] text-input" type="text" name="dtaskname" id="dtaskname" placeholder="DTask name input">
+                                                                                        <span class="help-block">DTask's name</span>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                                <label for="textfield" class="control-label">d_branch</label>
+                                                                                <div class="controls">
+                                                                                        <input type="text" name="d_branch" id="d_branch" placeholder="d_branch input" class="input-xlarge">
+                                                                                        <span class="help-block">d_branch</span>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                                <label for="textfield" class="control-label">d_dir</label>
+                                                                                <div class="controls">
+                                                                                        <input class="validate[required] text-input"  type="text" name="d_dir" id="d_dir" placeholder="d_dir">
+                                                                                        <span class="help-block">d_dir</span>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                                <label for="textfield" class="control-label">f_permissions</label>
+                                                                                <div class="controls">
+                                                                                        <textarea class="text-input"  type="text" name="f_permissions" id="f_permissions" placeholder="File Permissions"></textarea>
+                                                                                        <span class="help-block">File Permissions. exp: file1_path|file1_type|file1_permissions|contain_sub_dir|file1_user|file1_group </span>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                                <label for="textfield" class="control-label">priority_type</label>
+                                                                                <div class="controls">
+                                                                                        <input class="validate[required] text-input"  type="text" name="priority_type" value="last"  id="priority_type" placeholder="priority_type">
+                                                                                        <span class="help-block">priority_type</span>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                                <label for="host" class="control-label">host</label>
+                                                                                <div class="controls">
+                                                                                        <select name="host" id="host" class='input-large'>
+                                                                                        [% host_html_select_str %]
+                                                                                        </select>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                                <label for="is_active" class="control-label">Is Active</label>
+                                                                                <div class="controls">
+                                                                                        <select name="is_active" id="is_active" class='input-large'>
+                                                                                                <option value="1">enable</option>
+                                                                                                <option value="0">disable</option>
+                                                                                        </select>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="form-actions">
+                                                                                <button type="submit" class="btn btn-info">Submit</button>
+                                                                                <button type="reset" class="btn">Cancel</button>
+                                                                        </div>
+                                                                </form>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        <!-- End: Content -->
+    </div>
+    <!-- End: Middle -->
+    <!-- Begin: Footer -->
+         [% INCLUDE footer.tt %]
+    <!-- End Footer: Footer -->
+</div>
+
+<!-- Begin: Scripts-->
+ [% INCLUDE  html_scripts_table_data.tt %]
+<!-- End: Scripts-->
+
+
+</body>
+
+</html>

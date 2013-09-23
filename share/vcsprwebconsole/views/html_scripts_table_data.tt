@@ -1,0 +1,79 @@
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.easing.js"></script>
+<script src="/assets/js/jquery.easing.compatibility.js"></script>
+<script src="/assets/js/jquery.cookie.js"></script>
+<script src="/assets/js/jquery.chosen.js"></script>
+<script src="/assets/js/jquery.easy-pie-chart.js"></script>
+<script src="/assets/js/jquery.flot.js"></script>
+<script src="/assets/js/jquery.flot.grow.js"></script>
+<script src="/assets/js/jquery.flot.pie.js"></script>
+<script src="/assets/js/jquery.flot.resize.js"></script>
+<script src="/assets/js/jquery.flot.tooltip.js"></script>
+<script src="/assets/js/jquery.flot.orderBars.js"></script>
+<script src="/assets/js/jquery.sparkline.js"></script>
+<script src="/assets/js/jquery.tagsinput.js"></script>
+<script src="/assets/js/jquery.maskedinput.js"></script>
+<script src="/assets/js/jquery.resize.js"></script>
+<script src="/assets/js/jquery.mousewheel.js"></script>
+<script src="/assets/js/jquery.mCustomScrollbar.html"></script>
+<script src="/assets/js/jquery.nicescroll.js"></script>
+<script src="/assets/js/jquery.fullcalendar.js"></script>
+<script src="/assets/js/jquery.gcal.js"></script>
+<script src="/assets/js/jquery.ui.js"></script>
+<script src="/assets/js/jquery.stepper.js"></script>
+<script src="/assets/js/jquery.multi-select.js"></script>
+<script src="/assets/js/jquery.jshashtable.js"></script>
+<script src="/assets/js/jquery.numberformatter.js"></script>
+<script src="/assets/js/jquery.tmpl.js"></script>
+<script src="/assets/js/jquery.dependClass.js"></script>
+<script src="/assets/js/jquery.draggable.js"></script>
+<script src="/assets/js/jquery.slider.js"></script>
+<script src="/assets/js/jquery.dataTables.js"></script>
+<script src="/assets/js/jquery.dataTables.bootstrap.js"></script>
+<script src="/assets/js/jquery.elfinder.js"></script>
+<script src="/assets/js/jquery.validationEngine.js"></script>
+<script src="/assets/js/jquery.validationEngine-en.js"></script>
+<script src="/assets/js/jquery.validate.js"></script>
+<script src="/assets/js/jquery.validate.additional-methods.js"></script>
+<script src="/assets/js/jquery.placeholder.js"></script>
+<!--
+-->
+<script src="/assets/js/bootstrap-transition.js"></script>
+<script src="/assets/js/bootstrap-alert.js"></script>
+<script src="/assets/js/bootstrap-modal.js"></script>
+<script src="/assets/js/bootstrap-dropdown.js"></script>
+<script src="/assets/js/bootstrap-scrollspy.js"></script>
+<script src="/assets/js/bootstrap-tab.js"></script>
+<script src="/assets/js/bootstrap-tooltip.js"></script>
+<script src="/assets/js/bootstrap-popover.js"></script>
+<script src="/assets/js/bootstrap-button.js"></script>
+
+
+<script src="/assets/js/bootstrap-collapse.js"></script>
+<script src="/assets/js/bootstrap-carousel.js"></script>
+<script src="/assets/js/bootstrap-typeahead.js"></script>
+<script src="/assets/js/bootstrap-affix.js"></script>
+<script src="/assets/js/bootstrap-fileupload.js"></script>
+<script src="/assets/js/bootstrap-datepicker.js"></script>
+<script src="/assets/js/bootstrap-timepicker.js"></script>
+<script src="/assets/js/bootstrap-colorpicker.js"></script>
+<script src="/assets/js/bootstrap-bootbox.js"></script>
+<script src="/assets/js/wysihtml5.js"></script>
+<script src="/assets/js/bootstrap-wysihtml5.js"></script>
+<script src="/assets/js/holder.js"></script>
+<script src="/assets/js/prettify.js"></script>
+<script src="/assets/js/excanvas.js"></script>
+<!--
+-->
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src=".//assets/js/html5shiv.js"></script>
+<![endif]-->
+<script src="/assets/js/main.js"></script>
+
+<!--
+<script src="/assets/js/main-charts.js"></script>
+-->

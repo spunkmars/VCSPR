@@ -1,0 +1,96 @@
+<table width="800" height="600" border="1" align="left">
+  <tr>
+    <td colspan="6">STATUS</td>
+  </tr>
+  <tr>
+    <td width="131">&nbsp;</td>
+    <td width="162">&nbsp;</td>
+    <td width="83">&nbsp;</td>
+    <td width="162">&nbsp;</td>
+    <td width="103">&nbsp;</td>
+    <td width="119">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="6">LAST COMMIT</td>
+  </tr>
+  <tr>
+    <td>commit_hash</td>
+    <td colspan="5">[% result.commit_hash %]</td>
+  </tr>
+  <tr>
+    <td>parent_hashes</td>
+    <td colspan="5">[% result.parent_hashes %]</td>
+  </tr>
+  <tr>
+    <td>tree_hash</td>
+    <td colspan="5">[% result.tree_hash %]</td>
+  </tr>
+  <tr>
+    <td>committer_date</td>
+    <td>[% result.committer_date %]</td>
+    <td>committer</td>
+    <td>[% result.committer %]</td>
+    <td>committer_email</td>
+    <td>[% result.committer_email %]</td>
+  </tr>
+  <tr>
+    <td>author_date</td>
+    <td>[% result.author_date %]</td>
+    <td>author</td>
+    <td>[% result.author %]</td>
+    <td>author_email</td>
+    <td>[% result.author_email %]</td>
+  </tr>
+  <tr>
+    <td height="50">subject</td>
+    <td colspan="5">[% result.subject %]</td>
+  </tr>
+  <tr>
+    <td colspan="6">LOCAL INFO</td>
+  </tr>
+  <tr>
+    <td>curr_remote</td>
+    <td>[% result.curr_remote %]</td>
+    <td>curr_branch</td>
+    <td>[% result.curr_branch %]</td>
+    <td>has_up_to_date</td>
+    <td>[% result.has_up_to_date %]</td>
+  </tr>
+  <tr>
+    <td>branch_list</td>
+    <td colspan="5">[% result.branch_list %]</td>
+  </tr>
+  <tr>
+    <td colspan="6">REMOTE INFO</td>
+  </tr>
+  <tr>
+    <td>remote_name</td>
+    <td colspan="5">[% result.remote_name %]</td>
+  </tr>
+  <tr>
+    <td>fetch_url</td>
+    <td colspan="5">[% result.fetch_url %]</td>
+  </tr>
+  <tr>
+    <td>push_url</td>
+    <td colspan="5">[% result.push_url %]</td>
+  </tr>
+  <tr>
+    <td>remote_branch_list</td>
+    <td colspan="5">[% result.remote_branch_list %]</td>
+  </tr>
+  <tr>
+    <td>l_b_git_pull</td>
+    <td colspan="5">[% result.l_b_git_pull %]</td>
+  </tr>
+  <tr>
+    <td>l_r_git_push</td>
+    <td colspan="5">[% result.l_r_git_push %]</td>
+  </tr>
+  <tr>
+    <td colspan="6">GIT STATUS</td>
+  </tr>
+  <tr>
+    <td height="180" colspan="6" align="left" >[% result.git_status %]</td>
+  </tr>
+</table>

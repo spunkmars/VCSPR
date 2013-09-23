@@ -1,0 +1,12 @@
+<br>
+<br>
+<p align="center">[% title %] </p>
+
+<form  method="post">
+<table align="center">
+    [% FOREACH column IN column_names %]
+    <tr><th>[% column %]:</th><td><input id="[% column %]" type="text" name="[% column %]"   value="[% form.$column %]" /> </td></tr>
+    [% END %]
+    <tr><th></th><td><input type="submit" value="Submit"></td></tr>
+</table>
+</form>

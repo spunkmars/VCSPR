@@ -1,0 +1,115 @@
+[% INCLUDE html_head.tt %]
+<body>
+
+<!-- Begin: Page Preloader -->
+<div id="preloader">
+    <div class="inline"></div>
+</div>
+<!-- End: Page Preloader -->
+
+<div id="wrap">
+    <!-- Begin: Responsive Menu -->
+    <div class="nav-left" id="nav-left">
+        <div class="inline">
+            <div class="fixed"></div>
+        </div>
+    </div>
+    <!-- End: Responsive Menu -->
+    <!-- Begin: Header -->
+         [% INCLUDE header.tt %]
+    <!-- End: Header -->
+    <!-- Begin: Middle -->
+    <div class="middle">
+        <!-- Begin: Sidebar -->
+                 [% INCLUDE sidebar.tt active_sidebar_tag = 'host' %]
+        <!-- End: Sidebar -->
+        <!-- Begin: Content -->
+                <div class="content">
+                        <div class="content-top">
+                                <ul class="breadcrumb">
+                                        <li class="dashboard">
+                                                <a href="/" title="Dashboard"><i class="icon-home icon-large"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href="/host/" title="Host">Host</a>
+                                        </li>
+                                        <li>
+                                                <i class="icon-angle-right icon-large"></i>
+                                        </li>
+                                        <li>
+                                                <a href="#" title="Host Edit">Host Edit</a>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div class="content-bottom">
+                                <div class="row-fluid">
+                                        <div class="box span12">
+                                                <div class="title">
+                                                        <div class="head">
+                                                                <i class="icon-edit icon-large"></i>
+                                                                <h2>Basic elements</h2>
+                                                        </div>
+                                                        <div class="actions">
+                                                                <div class="item">
+                                                                        <i class="icon-minus collapse-box-toggle"></i>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="block">
+                                                        <div class="form">
+                                                                <form action="#" method="post" class="form-horizontal form-bordered form-validation">
+                                                                        <input id="idv" type="hidden" name="id" maxlength="255" value="[% form.id %]" />
+                                                                        <div class="control-group">
+                                                                                <label for="textfield" class="control-label">hostname</label>
+                                                                                <div class="controls">
+                                                                                        <input  class="validate[required] text-input" type="text" name="hostname" id="hostname"  value="[% form.name %]" placeholder="Host name input">
+                                                                                        <span class="help-block">Host's name</span>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                                <label for="textfield" class="control-label">aliasname</label>
+                                                                                <div class="controls">
+                                                                                        <input type="text" name="aliasname" id="aliasname"  value="[% form.alias_name %]"  placeholder="Host alias name input" class="input-xlarge">
+                                                                                        <span class="help-block">Alias name</span>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                                <label for="textfield" class="control-label">ip</label>
+                                                                                <div class="controls">
+                                                                                        <input class="validate[required] text-input" type="text" name="ip" id="ip"  value="[% form.ip %]"  placeholder="IP Address">
+                                                                                        <span class="help-block">IP address</span>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                                <label for="textarea" class="control-label">info</label>
+                                                                                <div class="controls">
+                                                                                        <textarea name="info" id="info" class="input-block-level">[% form.info %]</textarea>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="form-actions">
+                                                                                <button type="submit" class="btn btn-info">Submit</button>
+                                                                                <button type="reset" class="btn">Cancel</button>
+                                                                        </div>
+                                                                </form>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        <!-- End: Content -->
+    </div>
+    <!-- End: Middle -->
+    <!-- Begin: Footer -->
+         [% INCLUDE footer.tt %]
+    <!-- End Footer: Footer -->
+</div>
+
+<!-- Begin: Scripts-->
+ [% INCLUDE  html_scripts_table_data.tt %]
+<!-- End: Scripts-->
+
+
+</body>
+
+</html>

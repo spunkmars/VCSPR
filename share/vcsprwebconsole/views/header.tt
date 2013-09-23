@@ -1,0 +1,30 @@
+    <div class="header">
+        <!-- Begin: Responsive Menu Icon -->
+        <a href="#" class="open-nav"><i class="icon-reorder icon-2x"></i></a>
+        <!-- Begin: Responsive Menu Icon -->
+        <a href="/" class="logo"><span>VCSPR Web Console</span></a>
+        <!-- Begin: Header Navigation -->
+        <ul class="nav" id="nav-top">
+            <li>
+                <a href="#">
+                    <i class="icon-cog"></i><em>    Settings   </em>
+                </a>
+                <ul>
+                    <li><a href="[% old_version_url %]"><i class="icon-mail-reply-all"></i> Go Old Version </a></li>
+                    <li><a href="/user/list/"><i class="icon-user"></i>User List</a></li>
+                    <li><a href="/user/add/"><i class="icon-user"></i>Add New User</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-lock"></i><em> Account {[% user.username %]} </em>
+                </a>
+                <ul>
+                    <li><a href="/user/edit/[% user.id %]/"><i class="icon-user"></i>My Profile</a></li>
+                    <!-- <li><a href="#"><i class="icon-cog"></i>Settings</a></li> -->
+                    <li><a href="/logout/"><i class="icon-signout"></i>Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- End: Header Navigation -->
+    </div>

@@ -1,0 +1,30 @@
+#flotTip 
+{
+    padding: 10px 5px;
+    background-color: #000000;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    border: none;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    box-shadow: 0 0 3px #555;
+    color: #000000;
+    z-index: 100;
+}
+
+.pie-chart-label {
+    font-size: 12px;
+    text-align: center;
+    background: #e7f1f1;
+    color: #000;
+    border:1px solid #d6e4e4;
+    border-radius: 2px;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    padding:2px 10px;
+    -moz-box-shadow:0 1px 0px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+}

@@ -1,0 +1,13 @@
+<br>
+<br>
+<p align="center">[% title %] </p>
+
+<form action="./" method="post">
+<table align="center">
+    <tr><th>hostname:</th><td><input id="hostname" type="text" name="hostname" maxlength="255" /> </td></tr>
+    <tr><th>aliasname:</th><td><input id="aliasname" type="text" name="aliasname" maxlength="255" /> </td></tr>
+    <tr><th>ip:</th><td><input id="ip" type="text" name="ip" maxlength="255" /> </td></tr>
+    <tr><th>info:</th><td><textarea id="info" rows="10" cols="40" name="info"></textarea> </td></tr>
+    <tr><th></th><td><input type="submit" value="Submit"></td></tr>
+</table>
+</form>

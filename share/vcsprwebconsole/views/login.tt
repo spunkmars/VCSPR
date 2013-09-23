@@ -1,0 +1,62 @@
+[% INCLUDE html_head.tt %]
+<body>
+
+<!-- Begin: Page Preloader -->
+<div id="preloader">
+    <div class="inline"></div>
+</div>
+<!-- End: Page Preloader -->
+<div id="auth-wrap">
+        <div class="top">VCSPR Web Console</div>
+        <div class="middle">
+                <form action="/login/" method="post" class="form-vertical form-validation" id="login-form">
+                        <input id="path" type="hidden" name="path" maxlength="255" value="[% path %]" />
+                        <div class="controls">
+                                <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-user"></i></span>
+                                        <input type="text" name="user" class="validate[required] text-input" placeholder="Username">
+                                </div>
+                        </div>
+                        <div class="controls">
+                                <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-key"></i></span>
+                                        <input type="password" name="pass" class="validate[required] text-input" placeholder="Password">
+                                </div>
+                        </div>
+                        <div class="controls action clearfix">
+                                <div class="remember clearfix">
+                                        <span>Remember me</span>
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                            <label class="onoffswitch-label" for="myonoffswitch">
+                                                <div class="onoffswitch-inner">
+                                                    <div class="onoffswitch-active"><div class="onoffswitch-switch">Yes</div></div>
+                                                    <div class="onoffswitch-inactive"><div class="onoffswitch-switch">No</div></div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                </div>
+                                <button type="submit" class="btn btn-info">Login</button>
+                        </div>
+                </form>
+        </div>
+        <div class="bottom">
+                    <a href="[% old_version_url %]"><i class="icon-mail-reply-all"></i> Go Old Version </a>
+                    <!-- <a href="#"> Lost Password</a></li> -->
+        </div>
+        [% IF err_msg %]
+        <div class="alert alert-error">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>[% err_msg %]</strong>
+        </div>
+        [% END %]
+</div>
+
+<!-- Begin: Scripts-->
+ [% INCLUDE html_scripts.tt %]
+<!-- End: Scripts-->
+
+
+</body>
+
+</html>

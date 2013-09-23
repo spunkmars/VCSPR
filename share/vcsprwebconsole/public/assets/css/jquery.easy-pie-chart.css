@@ -1,0 +1,29 @@
+.easyPieChart {
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+.easyPieChart .chart {
+	margin: 5px 0;
+}
+
+.easyPieChart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.easyPieChart .label {
+    position: relative;
+    float: none;
+    margin: 10px auto auto auto;
+    text-align: center;
+}
+
+.easyPieChart button.updateChart {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 99;
+}

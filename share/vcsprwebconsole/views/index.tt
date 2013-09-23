@@ -1,0 +1,42 @@
+[% INCLUDE html_head.tt %]
+<body>
+
+<!-- Begin: Page Preloader -->
+<div id="preloader">
+    <div class="inline"></div>
+</div>
+<!-- End: Page Preloader -->
+
+<div id="wrap">
+    <!-- Begin: Responsive Menu -->
+    <div class="nav-left" id="nav-left">
+        <div class="inline">
+            <div class="fixed"></div>
+        </div>
+    </div>
+    <!-- End: Responsive Menu -->
+    <!-- Begin: Header -->
+         [% INCLUDE header.tt %] 
+    <!-- End: Header -->
+    <!-- Begin: Middle -->
+    <div class="middle">
+        <!-- Begin: Sidebar -->
+                 [% INCLUDE sidebar.tt %]
+        <!-- End: Sidebar -->
+        <!-- Begin: Content -->
+        <!-- End: Content -->
+    </div>
+    <!-- End: Middle -->
+    <!-- Begin: Footer -->
+         [% INCLUDE footer.tt %]
+    <!-- End Footer: Footer -->
+</div>
+
+<!-- Begin: Scripts-->
+ [% INCLUDE html_scripts.tt %]
+<!-- End: Scripts-->
+
+
+</body>
+
+</html>

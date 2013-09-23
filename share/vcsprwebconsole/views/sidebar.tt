@@ -1,0 +1,233 @@
+        <div class="sidebar">
+            <!-- Begin: Navigation -->
+            <div class="box" id="nav-main">
+                <ul class="nav" id="nav-sidebar">
+                                        [% IF active_sidebar_tag == 'dashboard' %]
+                    <li class="active">
+                                        [% ELSE %]
+                    <li >
+                                        [% END %]
+                        <a href="/">
+                            <i class="icon-home"></i><span>Dashboard</span>
+                        </a>
+                    </li>
+                                        [% IF active_sidebar_tag == 'host' %]
+                                        <li class="active">
+                                        [% ELSE %]
+                                        <li >
+                                        [% END %]
+                                            <a href="/host/list/">
+                                                <i class="icon-edit"></i><span>Host</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="/host/list/">
+                                                        <i class="icon-caret-right"></i><span>Host List</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/host/add/">
+                                                        <i class="icon-caret-right"></i><span>Add New Host</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        [% IF active_sidebar_tag == 'vcs' %]
+                                        <li class="active">
+                                        [% ELSE %]
+                                        <li >
+                                        [% END %]
+                                                <a href="/vcs/">
+                                                        <i class="icon-edit"></i><span>VCS</span>
+                                                </a>
+                                                <ul>
+                                                        <li>
+                                                                <a href="/vcs/list/">
+                                                                        <i class="icon-caret-right"></i><span>VCS List</span>
+                                                                </a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="/vcs/add/">
+                                                                        <i class="icon-caret-right"></i><span> Add New VCS</span>
+                                                                </a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                        [% IF active_sidebar_tag == 'project' %]
+                                        <li class="active">
+                                        [% ELSE %]
+                                        <li >
+                                        [% END %]
+                                                <a href="/project/">
+                                                        <i class="icon-edit"></i><span>Project</span>
+                                                </a>
+                                                <ul>
+                                                        <li>
+                                                                <a href="/project/list/">
+                                                                        <i class="icon-caret-right"></i><span>Project List</span>
+                                                                </a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="/project/add/">
+                                                                        <i class="icon-caret-right"></i><span>Add New Project</span>
+                                                                </a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                        [% IF active_sidebar_tag == 'dtask' %]
+                                        <li class="active">
+                                        [% ELSE %]
+                                        <li >
+                                        [% END %]
+                                                <a href="/dtask/">
+                                                        <i class="icon-edit"></i><span>DTask</span>
+                                                </a>
+                                                <ul>
+                                                        <li>
+                                                                <a href="/dtask/list/">
+                                                                        <i class="icon-caret-right"></i><span>DTask List</span>
+                                                                </a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="/dtask/add/">
+                                                                        <i class="icon-caret-right"></i><span> Add New DTask</span>
+                                                                </a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                        [% IF active_sidebar_tag == 'dtaskgroup' %]
+                                        <li class="active">
+                                        [% ELSE %]
+                                        <li >
+                                        [% END %]
+                                                <a href="/dtaskgroup/">
+                                                        <i class="icon-edit"></i><span>DTaskGroup</span>
+                                                </a>
+                                                <ul>
+                                                        <li>
+                                                                <a href="/dtaskgroup/list/">
+                                                                        <i class="icon-caret-right"></i><span>DTaskGroup List</span>
+                                                                </a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="/dtaskgroup/add/">
+                                                                        <i class="icon-caret-right"></i><span>Add New DTaskGroup</span>
+                                                                </a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="/dtaskgroup/members/">
+                                                                        <i class="icon-caret-right"></i><span>Manage DTaskGroup Members</span>
+                                                                </a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                        [% IF active_sidebar_tag == 'deploy' %]
+                                        <li class="active">
+                                        [% ELSE %]
+                                        <li >
+                                        [% END %]
+                                                <a href="/deploy/">
+                                                        <i class="icon-edit"></i><span>Deploy</span>
+                                                </a>
+                                                <ul>
+                                                        <li>
+                                                                <a href="/deploy/list/">
+                                                                        <i class="icon-caret-right"></i><span>Deploy List</span>
+                                                                </a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="/deploy/add/">
+                                                                        <i class="icon-caret-right"></i><span>Add New Deploy</span>
+                                                                </a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                        [% IF active_sidebar_tag == 'vcspushlog' %]
+                                        <li class="active">
+                                        [% ELSE %]
+                                        <li >
+                                        [% END %]
+                                                <a href="/vcspushlog/">
+                                                        <i class="icon-edit"></i><span>VCSPushLog</span>
+                                                </a>
+                                                <ul>
+                                                        <li>
+                                                                <a href="/vcspushlog/list/">
+                                                                        <i class="icon-caret-right"></i><span>VCSPushLog List</span>
+                                                                </a>
+                                                        </li>
+                                                      <!--  <li>
+                                                                <a href="/vcspushlog/manage/">
+                                                                        <i class="icon-caret-right"></i><span>Manage VCSPushLog</span>
+                                                                </a>
+                                                        </li>  -->
+                                                </ul>
+                                        </li>
+                                        [% IF active_sidebar_tag == 'dtasklog' %]
+                                        <li class="active">
+                                        [% ELSE %]
+                                        <li >
+                                        [% END %]
+                                                <a href="/dtasklog/">
+                                                        <i class="icon-edit"></i><span>DTaskLog</span>
+                                                </a>
+                                                <ul>
+                                                        <li>
+                                                                <a href="/dtasklog/list/">
+                                                                        <i class="icon-caret-right"></i><span>DTaskLog List</span>
+                                                                </a>
+                                                        </li>
+                                                      <!--  <li>
+                                                                <a href="/dtasklog/manage/">
+                                                                        <i class="icon-caret-right"></i><span>Manage DTaskLog</span>
+                                                                </a>
+                                                        </li> -->
+                                                </ul>
+                                        </li>
+                </ul>
+            </div>
+            <!-- Begin: Navigation -->
+            <!-- Begin: Server Usage -->
+
+
+            <div class="box" id="server-usage">
+             <!-- <a href="[% old_version_url %]"><i class="icon-mail-reply-all"></i> Go Old Version </a>
+                        
+                <div class="title">
+                    <div class="head">
+                        <i class="icon-hdd icon-large"></i>
+                        <h2>Server</h2>
+                    </div>
+                    <div class="actions">
+                        <div class="item">
+                            <i class="icon-refresh update" title="Update"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="chart">
+                                <div class="percent" data-percent="12"><span>12</span>%</div>
+                                <div class="label label-success">Disk</div>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="chart">
+                                <div class="percent" data-percent="55"><span>55</span>%</div>
+                                <div class="label label-warning">CPU</div>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="chart">
+                                <div class="percent" data-percent="33"><span>33</span>%</div>
+                                <div class="label label-info">RAM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                       -->
+            </div>
+
+            <!-- Begin: Server Usage -->
+        </div>

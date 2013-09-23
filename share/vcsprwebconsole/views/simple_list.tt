@@ -1,0 +1,37 @@
+[% INCLUDE header.tt  %]
+<br>
+<br>
+<p align="center"><b> [% title %] </b></p>
+<p align="center"> <a href="[% url_prefix %]/add/" > add [% url_prefix %] </a> </p>
+[% IF results.size %]
+
+<table border="1" align="center">
+
+    <tr>
+    [% FOREACH s_column IN column_names %]
+        <td>[% s_column %]</td>
+    [% END %]
+    <td> action </td>
+    </tr>
+
+[% FOREACH result IN results   %]
+    <tr>
+    
+        [% FOREACH d_column IN column_names %]
+
+            <td> [% result.$d_column %] </td>
+
+        [% END %]
+
+        <td><a href="[% url_prefix %]/detail/[% result.id %]/" > Detail </a> &nbsp;
+        <a href="[% url_prefix %]/edit/[% result.id %]/" > Edit </a> &nbsp;
+        <a href="[% url_prefix %]/delete/[% result.id %]/" > Delete </a> &nbsp;</td>
+    </tr>
+[% END  %]
+</table>
+
+[% ELSE %]
+     No result !
+[% END %]
+
+[% INCLUDE footer.tt %]

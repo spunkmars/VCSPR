@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>VCSPR Web Console</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Robots" content="Index, Follow" />
+<meta name="Revisit-After" content="1 Days" />
+<meta name="author" content="SpunkMars++" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="/assets/css/main.css" media="all" type="text/css" rel="stylesheet">
+<link href="/assets/css/theme.cyan.css" media="all" type="text/css" rel="stylesheet" id="css-theme">
+<link href="/javascripts/impromptu/jquery-impromptu.css" media="all" type="text/css" rel="stylesheet">
+</head>

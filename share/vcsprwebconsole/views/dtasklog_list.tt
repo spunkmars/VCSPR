@@ -1,0 +1,114 @@
+[% INCLUDE html_head.tt %]
+<body>
+
+<!-- Begin: Page Preloader -->
+<div id="preloader">
+    <div class="inline"></div>
+</div>
+<!-- End: Page Preloader -->
+
+<div id="wrap">
+    <!-- Begin: Responsive Menu -->
+    <div class="nav-left" id="nav-left">
+        <div class="inline">
+            <div class="fixed"></div>
+        </div>
+    </div>
+    <!-- End: Responsive Menu -->
+    <!-- Begin: Header -->
+         [% INCLUDE header.tt %] 
+    <!-- End: Header -->
+    <!-- Begin: Middle -->
+    <div class="middle">
+        <!-- Begin: Sidebar -->
+                 [% INCLUDE sidebar.tt active_sidebar_tag = 'dtasklog' %]
+        <!-- End: Sidebar -->
+        <!-- Begin: Content -->
+                <div class="content">
+                        <div class="content-top">
+                                <ul class="breadcrumb">
+                                        <li class="dashboard">
+                                                <a href="/" title="Dashboard"><i class="icon-home icon-large"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href="/dtasklog/" title="DTaskLog">DTaskLog</a>
+                                        </li>
+                                        <li>
+                                                <i class="icon-angle-right icon-large"></i>
+                                        </li>
+                                        <li>
+                                                <a href="/dtasklog/list/" title="DTaskLog List">DTaskLog List</a>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div class="content-bottom">
+                                <div class="row-fluid">
+                                        <div class="box span12">
+                                                <div class="title">
+                                                        <div class="head">
+                                                                <i class="icon-table icon-large"></i>
+                                                                <h2>Default styles</h2>
+                                                        </div>
+                                                        <div class="actions">
+                                                                <div class="item">
+                                                                        <i class="icon-minus collapse-box-toggle"></i>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="block table data-table">
+                                                        <table cellpadding="0" cellspacing="0" border="0" class="bordered-table zebra-striped table-striped" id="dataTable1" style="width:100%">
+                                                                <thead>
+                                                                        <tr>
+                                                                                <th>id</th>
+                                                                                <th>dtask_name</th>
+                                                                                <th>trigger_by</th>
+                                                                                <th>repo</th>
+                                                                                <th>host_name</th>
+                                                                                <th>exec_status</th>
+                                                                                <th>x_date</th>
+                                                                                <th>exec_info</th>
+                                                                        </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                        [% IF results.size %]
+                                                                        
+                                                                        
+                                                                        [% FOREACH result IN results   %]
+                                                                            <tr class="even gradeA">
+                                                                            <td> [% result.id %]</td>
+                                                                            <td> [% result.dtask_name %] </td>
+                                                                            <td> [% result.trigger_by %] </td>
+                                                                            <td> [% result.repo %] </td>
+                                                                            <td> [% result.host_name %] </td>
+                                                                            <td> [% result.exec_status %] </td>
+                                                                            <td> [% result.x_date %] </td>
+                                                                            <td> [% result.exec_info %] </td>
+                                                                            </tr>
+                                                                        [% END  %]
+                                                                        
+                                                                        [% ELSE %]
+                                                                             No result !
+                                                                        [% END %]
+                                                                </tbody>
+                                                        </table>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        <!-- End: Content -->
+    </div>
+    <!-- End: Middle -->
+    <!-- Begin: Footer -->
+         [% INCLUDE footer.tt %]
+    <!-- End Footer: Footer -->
+</div>
+
+<!-- Begin: Scripts-->
+ [% INCLUDE  html_scripts_table_data.tt %]
+<!-- End: Scripts-->
+
+
+</body>
+
+</html>

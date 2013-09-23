@@ -1,0 +1,112 @@
+[% INCLUDE html_head.tt %]
+<body>
+
+<!-- Begin: Page Preloader -->
+<div id="preloader">
+    <div class="inline"></div>
+</div>
+<!-- End: Page Preloader -->
+
+<div id="wrap">
+    <!-- Begin: Responsive Menu -->
+    <div class="nav-left" id="nav-left">
+        <div class="inline">
+            <div class="fixed"></div>
+        </div>
+    </div>
+    <!-- End: Responsive Menu -->
+    <!-- Begin: Header -->
+         [% INCLUDE header.tt %]
+    <!-- End: Header -->
+    <!-- Begin: Middle -->
+    <div class="middle">
+        <!-- Begin: Sidebar -->
+                 [% INCLUDE sidebar.tt active_sidebar_tag = 'dtaskgroup' %]
+        <!-- End: Sidebar -->
+        <!-- Begin: Content -->
+                <div class="content">
+                        <div class="content-top">
+                                <ul class="breadcrumb">
+                                        <li class="dashboard">
+                                                <a href="/" title="Dashboard"><i class="icon-home icon-large"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href="/dtaskgroup/" title="DTaskGroup">DTaskGroup</a>
+                                        </li>
+                                        <li>
+                                                <i class="icon-angle-right icon-large"></i>
+                                        </li>
+                                        <li>
+                                                <a href="/dtaskgroup/members/" title="DTaskGroup Add">Manage DTaskGroup Members</a>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div class="content-bottom">
+                                <div class="row-fluid">
+                                        <div class="box span12">
+                                                <div class="title">
+                                                        <div class="head">
+                                                                <i class="icon-edit icon-large"></i>
+                                                                <h2>Basic elements</h2>
+                                                        </div>
+                                                        <div class="actions">
+                                                                <div class="item">
+                                                                        <i class="icon-minus collapse-box-toggle"></i>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="block">
+                                                        <div class="form">
+                                                                <form action="/dtaskgroup/add/" method="post" class="form-horizontal form-bordered form-validation">
+                                                                        <div class="control-group">
+                                                                                <label for="dtaskgroup" class="control-label">DTaskGroup</label>
+                                                                                <div class="controls">
+                                                                                        <select name="dtask_group" id="dtaskgroup" class='input-large' onchange="javascript:switch_dtaskgroup()">
+                                                                                                <option value="undefined">-----</option>
+                                                                                                [% dtaskgroup_list_html_select_str %]
+                                                                                        </select>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                                <label for="dtask" class="control-label">DTask</label>
+                                                                                <div class="controls">
+                                                                                        <select name="dtask" id="dtask" class='nput-large'>
+                                                                                                
+                                                                                        </select>
+                                                                                        &nbsp;&nbsp;<a title="Add Member" data-original-title="Add" href="javascript:add_dtask_to_dtaskgroup()" class="btn btn-mini btn-warning"><i class="icon-upload-alt"></i>&nbsp;Add Member</a>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                                <label for="textarea" class="control-label">Members</label>
+                                                                                <div class="controls">
+                                                                                        <span id="members_str"></span>
+                                                                                </div>
+                                                                        </div>                                                                                                                                            
+                                                                </form>
+                                                                <div class="alert alert-info">
+                                                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                                                    <strong> <span id="result_msg">  </span></strong>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        <!-- End: Content -->
+    </div>
+    <!-- End: Middle -->
+    <!-- Begin: Footer -->
+         [% INCLUDE footer.tt %]
+    <!-- End Footer: Footer -->
+</div>
+
+<!-- Begin: Scripts-->
+ [% INCLUDE  html_scripts_table_data.tt %]
+ [% INCLUDE  html_scripts_custom.tt %]
+<!-- End: Scripts-->
+
+
+</body>
+
+</html>

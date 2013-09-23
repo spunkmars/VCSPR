@@ -1,0 +1,111 @@
+
+install_dir='/opt/VCSPR'
+mkdir -p ${install_dir}
+cd ${install_dir}
+mkdir -p data log
+
+
+
+1、依赖基础库安装：
+
+cpan -i  Data::Dump Net::FTP
+cpan -i  Data::Dumper Time::HiRes
+cpan -i  Digest::CRC IPC::SysV    IPC::Semaphore
+cpan -i  Sys::Syslog
+cpan -i  SPMR
+
+2.1、主要组件安装：
+
+cpan -i  YAML
+cpan -i  UUID::Tiny
+cpan -i  JSON
+cpan -i  File::ShareDir::Install
+cpan -i  Test::SharedFork
+cpan -i  Test::TCP
+cpan -i  Data::Dump
+cpan -i  HTTP::Parser::XS
+cpan -i  Plack
+cpan -i  Net::Server::PreFork
+cpan -i  Starman
+cpan -i  LWP::UserAgent
+cpan -i  CGI
+
+cpan -i  URI
+cpan -i  Crypt::CBC
+cpan -i  Crypt::RSA
+cpan -i  Crypt::OpenSSL::AES
+cpan -i  Crypt::RSA::Key::Public
+cpan -i  Crypt::RSA::Key::Private
+
+cpan -i  Module::Build::Compat
+cpan -i  Git::Repository
+cpan -i  Config::IniFiles
+cpan -i  XML::Simple
+
+cpan -i  DBI
+cpan -i  DBI::DBD
+cpan -i  DBD::SQLite
+
+2.2、 VCSPR Web Console 依赖组件安装：
+ 
+cpan -i Dancer
+cpan -i Template
+cpan -i Dancer::Template::Simple 
+cpan -i DBIx::Class
+cpan -i DBIx::Class::Schema::Loader
+cpan -i Dancer::Plugin::DBIC
+cpan -i Dancer::Plugin::SimpleCRUD 
+cpan -i Text::CSV
+cpan -i Crypt::SaltedHash
+cpan -i Dancer::Session::YAML
+
+3、开启相应的防火墙端口：
+   5001, 5002, 5003
+
+4、把主机与IP对应表写入/etc/hosts文件：
+
+5、修改VCSPR启动文件vcs_ctl.sh：
+
+
+6、在客户端/etc/hosts 添加gitlab 服务地址：
+ 
+   xxx.xxx.xxx.xxx   gitlabserver.test.com
+
+
+7、修改VCSPR 客户端VCSReceiver.pm 中的本机目录，用户定义：
+
+8、在客户端/root/.ssh/ 目录里添加 与 gitlabserver.test.com 库的通讯密钥：
+     chmod 600 id_rsa 
+
+9、运行share/scripts/install.pl 生成相关的目录，数据库文件，配置文件。
+
+10、修改data/publisher.xml 与 data/receiver.xml配置文件:
+
+11、运行share/scripts/get_rsa_keys.pl 生成相应的RSA 公钥、私钥，并拷入相关目录。
+
+12、启动|停止|重启 VCSPR：
+
+./vcs_ctl.sh  start                   #stop    |   restart
+
+13、安装git
+    yum install  gettext   gettext-devel
+    wget https://github.com/git/git/archive/v1.8.2.1.zip --no-check-certificate
+    unzip git-1.8.2.1.zip
+    cd git-1.8.2.1
+    make configure
+    ./configure --prefix=/opt/git --with-iconv=/usr/local/include
+    make
+    make install
+    ln -sf /opt/git/bin/git /usr/bin/git
+    ln -s /usr/local/lib/libcharset.so.1 /lib/
+    ldconfig
+
+14、设置让git忽略对文件权限位修改。
+    git config --global core.filemode false
+    对已有的repo，则修改 .git 目录下的 config文件，在[core]子选项下把 filemode = true 改为 filemode = false 。
+     
+15、设置全局的用户名与邮箱地址。
+    git config --global user.name "admin"
+    git config --global user.email    admin@spunkmars.org
+
+16、把gitlab VCS 主机名与IP地址 添加进receiver所在机器的~/.ssh/known_hosts  。
